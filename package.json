@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "name": "raaz",
+  "version": "1.0.0",
+  "description": "testing cloudfront app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/firstTest.js --require esm --reporter mochawesome --reporter-options reportDir=reports,reportFilename=mochawesome-report,json=false",
+    "report": "mochawesome-merge reports/*.json > mochawesome.json && mochawesome-report-generator mochawesome.json --reportDir reports/html-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "author": "Raaz",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.2",
+    "selenium-webdriver": "^4.27.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.8.2",
+    "mochawesome": "^7.1.3",
+    "esm": "^3.2.25",
+    "mochawesome-report-generator": "^5.0.0"
+  }
+}
